@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin-left: 0;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+    
+    
+    
+    font-family: "Roboto";
+}
+
+a {
+    color: black;
+}
+
+a:link{
+    text-decoration: none;
+    
+}
+a:visited{
+    text-decoration: none;
+    
+
+}
+a:hover{
+    text-decoration: none;
+    color: #bd7c0b;
+}
+a:active{
+    text-decoration: none;
+}
+.nav {
+    background-color: #ecedeb;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    font-size: 14px;
+    padding: 10px 20px;
+    
+    font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+
+}
+
+
+.toppart{
+   
+   width: 100%;
+   box-sizing: border-box;
+   padding: 0px 0px;
+   margin: 0px;
+   
+}
+.blackone{
+   
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.navbar{
+   
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px 16px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+    font-size: 14px;
+    font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    
+
+}
+.left-part{
+    display: flex;
+    box-sizing: border-box;
+    padding: 3px;
+    height: 64px;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.category{
+    display: flex;
+    box-sizing: border-box;
+    height: 64px;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+}
+.category div:hover {
+    background:azure;
+    padding: 20px;
+}
+
+
+.searchbar{
+    display: flex;
+    box-sizing: border-box;
+    border: grey;
+    background-color: aliceblue;
+    border-radius: 3%;
+    padding: 10px;
+    
+
+    
+}
+.searchbaricon{
+    display: flex;
+    
+    align-items: center;
+    width: 20px;
+
+}
+#search {
+    border: 0px;
+    background: transparent;margin-right: 20px;
+    outline: none;
+}
+
+
+.right-part{
+  
+    display: flex;
+    height: 64px;
+  
+    width: 30%;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.right-part button {
+    border: 0px;
+    background: transparent;
+}
+.right-part button:hover {
+    border: 0px;
+    background: transparent;
+    color: #bd7c0b;
+}
+
+
+#yellowline {
+    background-color: #faa619;
+    color: #faa619;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 85px;
+    font-size: 14px;
+
+}
+
+
+
+
+#slideshow{
+    padding: 20px 0px 50px 0px;
+
+    width: 90%;
+    margin: auto;
+    height: 500px;
+    box-sizing: border-box;
+
+}
+#slideshow > img {
+    width: 100%;
+    box-sizing: border-box;
+
+}
+#afterslideshow {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    
+    box-sizing: border-box;
+}
+#afterslideshow > img {
+    width: 100%;
+}
+
+.majordiv {
+    width: 90%;
+    margin: auto;
+   
+    box-sizing: border-box;
+}
+
+.h2heading {
+    font-size: 18px;
+    
+    padding-top: 24px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.h2heading  h2{
+    font-weight: 700;
+    line-height: 26px;
+    box-sizing: border-box;
+}
+.h2heading  div{
+    margin-top: 5px;
+    
+    width: 50px;
+    border-bottom: 5px solid #faa619;
+    box-sizing: border-box;
+}
+
+#OurBenefits {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+
+}
+#OurBenefits > img {
+    width: 100%;
+}
+.UnmissableOfferstype {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+
+}
+.UnmissableOfferstype > img {
+    width: 100%;
+}
+
+.fulllength {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    
+    box-sizing: border-box;
+}
+.fulllength > img {
+    width: 100%;
+}
+.Watches > img {
+    height: 450px;
+    border-radius: 10px;
+}
+#TopCategories{
+    width: 100%;
+    display: flex;
+    /* align-items: flex-start; */
+    
+}
+#leftportion {
+    width: 20%;
+    background-color: #ecedeb;
+}
+#leftportion button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: 0px;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 400;
+}
+#leftportion button:hover {
+    background:azure;
+}
+#rightportion {
+    width: 80%;
+    
+    
+    
+}
+#rightportion > div:first-child {
+    width: 100%;
+    display: flex;
+    
+    margin-left: 20px;
+    
+    
+    
+    
+}
+#categoryname {
+    display: inline;
+    margin-top: 0;
+    padding: 0;
+    line-height:inherit;
+   
+    
+}
+#categoryimage {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+    margin-left: 20px;
+}
+#categoryimage img {
+    width: 100%;
+    
+
+}
+#categoryimage h4 {
+    text-align: center;
+    margin: 0px;
+}
+#TopDealsIn{
+    width: 100%;
+   
+    /* align-items: flex-start; */
+
+}
+#topportion1 {
+    width: 100%;
+    
+}
+#topportion1 button {
+    
+
+    text-align: center;
+    border: 3px solid #5d5e5c;
+    background: transparent;
+    color: #5d5e5c;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0px 10px;
+
+}
+#topportion1 button:hover {
+    background:#5d5e5c;
+    color:aliceblue;
+    
+    
+    
+   
+}
+
+#bottomportion1 {
+    width: 100%;
+   
+    margin-top: 50px;
+    
+    
+}
+
+
+#categoryimage1 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+#categoryimage1 img {
+    width: 100%;
+    
+
+}
+#BigBrandsBigDiscounts {
+    grid-template-columns: repeat(6,1fr);
+}
+
+.breakline{
+    width: 100%;
+    border-top:4px solid #ecedeb;
+    margin:35px 0px;
+
+}
+
+#reachouttous {
+    display: flex;
+    width: 100%;
+}
+#leftpart {
+    width: 60%;
+}
+#leftpart h4 , #rightpart h4 {
+    font-size: 24px;
+    color: #212121;
+}
+#leftpart p , #rightpart p{
+    color: #929391;
+    font-size: 16px;
+}
+#leftpart > p:last-child{
+    color: rgb(242, 81, 57);
+    font-size: 14px;
+}
+
+#leftpart div , #rightpart div {
+    display: flex;
+} 
+#leftpart input{
+    padding: 18px 24px;
+    height: 56px;
+    font-size: 16px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    outline: none;
+    background-color: #F7F8F7;
+    color: #929391;
+    width: 325px;
+    border: 0px;
+
+}
+#leftpart button{
+    height: 56px;
+    font-size: 18px;
+    width: 179px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #000000;
+    color: white;
+}
+
+#rightpart {
+    width: 40%;
+}
+
+#rightpart img {
+    width: 60%;
+}
+#rightpart > div > div:first-child {
+    height: 56px;
+    min-width: 172px;
+    background: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/prod/Sprite_icons.svg) -420px -25px;
+}
+#rightpart > div > div:last-child {
+    height: 56px;
+    min-width: 172px;
+    background: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/prod/Sprite_icons.svg) -594px -25px;
+}
+
+#VariousSections {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+}
+#VariousSections > div > h6 {
+    color: #212121;
+    font-size: 20px;
+    margin: 0px;
+    margin-bottom: 12px;
+
+}
+#VariousSections > div > p {
+    color: #5d5e5c;
+    font-size: 16px;
+    margin: 6px;
+}
+#container {
+    display: flex;
+}
+#leftdiv{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+#leftdiv > div {
+display: flex;
+align-items: center;
+}
+
+#leftdiv > div >div:first-child {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #c8c9c6;
+}
+#leftdiv > div >div:last-child > p:first-child {
+    color: #5d5e5c;
+    font-size: 16px;
+    margin: 0px;
+    margin-left: 12px;
+
+
+}
+#leftdiv > div >div:last-child > p:last-child {
+    color: #212121;
+    font-size: 16px;
+    margin: 0px;
+    margin-left: 12px;
+
+
+}
+.reachtous{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+#leftdiv > div:first-child > div:first-child > div{
+    width: 24px;
+    height: 24px;
+    background: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/prod/Sprite_icons.svg) -270px -104px;
+}
+#leftdiv > div:nth-child(2) > div:first-child > div {
+    width: 24px;
+    height: 24px;
+    background: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/prod/Sprite_icons.svg) -311px -103px;   
+}
+#leftdiv > div:nth-child(3) > div:first-child > div {
+    width: 24px;
+    height: 24px;
+    background: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/prod/Sprite_icons.svg) -351px -104px;  
+}
+
+
+
+
+#rightdiv{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.socialmedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    margin-right: 20px;
+}
+.socialmedia > div {
+    height: 24px;
+    width: 24px;
+}
+#facebook {
+    background: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/prod/Sprite_icons.svg) -390px -104px;
+}
+#twitter {
+    background: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/prod/Sprite_icons.svg) -432px -104px;
+}
+#instagram {
+    background: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/prod/Sprite_icons.svg) -472px -104px;
+}
+
+#lastsection {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+#lastsection > div {
+    height: 50%;
+    margin: 0px 30px;
+}
+#lastsection > div:first-child {
+    
+    margin: 0px 40px;
+}
+#lastsection img {
+    width: 100%;
+}
+
+#lastsection p {
+    color: #5d5e5c;
+    font-size: 16px;
+    margin: 0px;
+    margin-left: 12px;
+}
