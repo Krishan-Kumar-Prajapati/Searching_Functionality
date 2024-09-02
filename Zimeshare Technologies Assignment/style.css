@@ -107,32 +107,117 @@ a:active{
 .category div:hover {
     background:azure;
     padding: 20px;
+    border-radius: 30px;
 }
 
-
-.searchbar{
-    display: flex;
-    box-sizing: border-box;
-    border: grey;
-    background-color: aliceblue;
-    border-radius: 3%;
-    padding: 10px;
-    
-
-    
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
 }
-.searchbaricon{
+
+.searchbar {
     display: flex;
-    
     align-items: center;
-    width: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 8px 12px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    max-width: 600px;
+    margin: 20px auto;
+}
 
-}
-#search {
-    border: 0px;
-    background: transparent;margin-right: 20px;
+.searchbarinput {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
     outline: none;
+    background-color: transparent;
+    color: #333;
 }
+
+.searchbarinput::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.searchbarinput:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.searchbar {
+    margin-top: 20px;
+    
+}
+
+.searchbarinput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.results {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.result-item {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.result-item img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.result-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.result-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
 
 
 .right-part{
@@ -174,33 +259,7 @@ a:active{
 
 
 
-#slideshow{
-    padding: 20px 0px 50px 0px;
 
-    width: 90%;
-    margin: auto;
-    height: 500px;
-    box-sizing: border-box;
-
-}
-#slideshow > img {
-    width: 100%;
-    box-sizing: border-box;
-
-}
-#afterslideshow {
-    padding: 50px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 90%;
-    
-    box-sizing: border-box;
-}
-#afterslideshow > img {
-    width: 100%;
-}
 
 .majordiv {
     width: 90%;
@@ -230,160 +289,6 @@ a:active{
     box-sizing: border-box;
 }
 
-#OurBenefits {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-
-}
-#OurBenefits > img {
-    width: 100%;
-}
-.UnmissableOfferstype {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-
-}
-.UnmissableOfferstype > img {
-    width: 100%;
-}
-
-.fulllength {
-    padding: 50px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-    
-    box-sizing: border-box;
-}
-.fulllength > img {
-    width: 100%;
-}
-.Watches > img {
-    height: 450px;
-    border-radius: 10px;
-}
-#TopCategories{
-    width: 100%;
-    display: flex;
-    /* align-items: flex-start; */
-    
-}
-#leftportion {
-    width: 20%;
-    background-color: #ecedeb;
-}
-#leftportion button {
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    border: 0px;
-    background: transparent;
-    font-size: 20px;
-    font-weight: 400;
-}
-#leftportion button:hover {
-    background:azure;
-}
-#rightportion {
-    width: 80%;
-    
-    
-    
-}
-#rightportion > div:first-child {
-    width: 100%;
-    display: flex;
-    
-    margin-left: 20px;
-    
-    
-    
-    
-}
-#categoryname {
-    display: inline;
-    margin-top: 0;
-    padding: 0;
-    line-height:inherit;
-   
-    
-}
-#categoryimage {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 10px;
-    margin-left: 20px;
-}
-#categoryimage img {
-    width: 100%;
-    
-
-}
-#categoryimage h4 {
-    text-align: center;
-    margin: 0px;
-}
-#TopDealsIn{
-    width: 100%;
-   
-    /* align-items: flex-start; */
-
-}
-#topportion1 {
-    width: 100%;
-    
-}
-#topportion1 button {
-    
-
-    text-align: center;
-    border: 3px solid #5d5e5c;
-    background: transparent;
-    color: #5d5e5c;
-    border-radius: 30px;
-    padding: 10px 15px;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 0px 10px;
-
-}
-#topportion1 button:hover {
-    background:#5d5e5c;
-    color:aliceblue;
-    
-    
-    
-   
-}
-
-#bottomportion1 {
-    width: 100%;
-   
-    margin-top: 50px;
-    
-    
-}
-
-
-#categoryimage1 {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-}
-#categoryimage1 img {
-    width: 100%;
-    
-
-}
-#BigBrandsBigDiscounts {
-    grid-template-columns: repeat(6,1fr);
-}
 
 .breakline{
     width: 100%;
