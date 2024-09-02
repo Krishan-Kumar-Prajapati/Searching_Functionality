@@ -103,8 +103,10 @@ const clothingItems = [
   ];
 
 
+  // Initial DOM updating for all items
+renderResults(clothingItems);
 
-//   DOM updating with the data
+// DOM updating with the data
 function renderResults(items) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
@@ -120,21 +122,72 @@ function renderResults(items) {
     });
 }
 
-// Function to filter items based on search 
-function filterItems(query) {
-    const filteredItems = clothingItems.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
-    renderResults(filteredItems);
+function normalizeString(str) {
+    return str.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
-// Event listener for search input without the need for an "Enter" button
+function levenshteinDistance(a, b) {
+    const matrix = [];
+    for (let i = 0; i <= b.length; i++) {
+        matrix[i] = [i];
+    }
+    for (let j = 0; j <= a.length; j++) {
+        matrix[0][j] = j;
+    }
+    for (let i = 1; i <= b.length; i++) {
+        for (let j = 1; j <= a.length; j++) {
+            if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                matrix[i][j] = matrix[i - 1][j - 1];
+            } else {
+                matrix[i][j] = Math.min(
+                    matrix[i - 1][j - 1] + 1,
+                    matrix[i][j - 1] + 1,     
+                    matrix[i - 1][j] + 1      
+                );
+            }
+        }
+    }
+    return matrix[b.length][a.length];
+}
+
+function fuzzySearch(query) {
+    const normalizedQuery = normalizeString(query);
+    if (query.length <= 3) {
+        return clothingItems;
+    }
+    return clothingItems.filter((item) => {
+        let mindistance = Infinity;
+
+        let array = item.name.split(" ");
+
+        for (let i = 0; i < array.length; i++) {
+            let itemNameNormalized = normalizeString(array[i]);
+
+            var distance = levenshteinDistance(
+                normalizedQuery,
+                itemNameNormalized,
+            );
+            if (distance < mindistance) {
+                mindistance = distance;
+            } else {
+                mindistance = mindistance;
+            }
+        }
+
+        return mindistance <= 2;
+    });
+}
+// Event listener for search input
 document.getElementById('searchbarinput').addEventListener('input', (event) => {
     const query = event.target.value;
     if (query.length > 3) {
-         filterItems(query);//The search results should appear as the user types, once the character count exceeds three letters.
+        const filteredItems = fuzzySearch(query);
+        renderResults(filteredItems);
     } else {
         renderResults(clothingItems); // Showing all items when query length is 3 or less
     }
 });
 
-// Initial DOM updating for all items
-renderResults(clothingItems);
+
+
+
